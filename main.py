@@ -42,3 +42,14 @@ i = 0
 while i <= 10:
     print(i)
     i+=1
+
+from urllib.request import urlopen
+story = urlopen('https://raw.githubusercontent.com/elmanko/python101/master/README.md')
+story_words = []
+for line in story:
+    #decode('utf8') jala strings en lugar de bytes a line_words
+    line_words = line.decode('utf8').split()
+    for word in line_words:
+        story_words.append(word)
+story.close()
+print(story_words)
