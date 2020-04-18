@@ -49,4 +49,8 @@ def main(url):
 if __name__ == '__main__':
     main(sys.argv[1])
 
-#just rying out the new commit with ssh
+#just trying out the new commit with ssh
+
+def dictionaries_test():
+        people = dict(('Alex' : 31),('Ana' : 27),('Pau' : 23))
+        print(people)

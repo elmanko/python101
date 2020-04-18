@@ -99,9 +99,17 @@ def display_nth_root(radicand, n):
     print(message)
 
 
-disp = display_nth_root(666,6)
+#disp = display_nth_root(666,6)
 #los dunder o double underscore __name__ name son features, o funciones especiales... creo
 '''
 num=nth_root(200,2)
 print(num)
 '''
+def dictionaries_test():
+        people = dict(Alex=31,Ana=23,Pau=27 )
+        books = [('Book 1', '1a'),('Book2', '2a'),('Book3','3a')]
+        print(books,people)
+        print(people)
+        print(books)
+
+dictionaries_test()
