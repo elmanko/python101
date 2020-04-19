@@ -16,7 +16,9 @@ o
 r que
 necesito hacer un experimento
 
-y que chinge a su madre el america
+y que chsm a su madre el america
+
+nocierto
 
 Ñ ñ¢
 

@@ -153,11 +153,11 @@ def dictionaries_test():
             print(f" k= {k} , v= {v}")
         #ejemplo con in y not in
 
-        banda = dict( pepe='vato', maria='ruca', tracy='puto', gonzalo='vato', mafer='ruca')
+        banda = dict( pepe='vato', maria='morra', tracy='dude', gonzalo='vato', mafer='ruca')
         band = banda.copy()
         """print(banda)
         print('pepe'in banda)
-        print( 'puto' in banda)
+        print( 'dude' in banda)
         print('jose' not in banda)
         print('mafer'not in banda)
         print(banda)
@@ -168,18 +168,18 @@ def dictionaries_test():
         band.update(eusebio=['1','2','3'])
         #print(band)
         band['eusebio']+= [4,5,'6']
-        band.update(pepe=['vato','machin'])
-        band['pepe']+= ['jalisquillo','pendejo']
+        band.update(pepe=['vato','gordo'])
+        band['pepe']+= ['jalisquillo','alto']
         #print(band)
         #print(band['pepe'])
 
         for v in band.values():
             print(v)
-        band['alex'] = ['vato','gto']
+        band['alex'] = ['vato','lol']
         #print(band)
         print('pp')
         from pprint import pprint as pp
 
         pp(band)
 
-dictionaries_test()
+#dictionaries_test()
