@@ -1,4 +1,4 @@
-#!/usr/bin/python3.6
+#!/usr/bin/env python3.6
 '''print("hello world")
 
 var1 = 1 
@@ -108,8 +108,78 @@ print(num)
 def dictionaries_test():
         people = dict(Alex=31,Ana=23,Pau=27 )
         books = [('Book 1', '1a'),('Book2', '2a'),('Book3','3a')]
-        print(books,people)
-        print(people)
+        names = [('pepe',20),('juan',33),('marcela',32),('octiavia',33)]
+        peeps = people.copy()
+        print(peeps)
+        pee = dict(peeps)
+        print(pee)
+        print('peeps is pee')
+        print(peeps is pee)
+        print('peeps == pee')
+        print(peeps == pee)
+        print(id(peeps))
+        print(id(pee))
+
+        p = dict(MArtin=21, Jose=44 , joseluis = 90)
+        pee.update(p)
+
+        print(pee)
+        #nm = dict(names)
+        #print(names)
+        #print(nm)
+        #print(books,people)
+        #print(people)
         print(books)
+        boox = dict(books)
+        boox.update({'Book3':'666','Book4':'5a'})
+        print('after books.update')
+        print(boox)
+
+        #loops
+        dik = dict( key1 = 'val1', key2 ='val2',
+                     key3 = 'val3', key4 = 'val4',
+                     key5 = 'val5', key6 = 'val6')
+        #print(dik)
+        for k in dik:
+            print(f"key= {k}, value= {dik[k]}")
+        
+        for v in dik.values():
+            print(v)
+        
+        for k in dik.keys():
+            print(k)
+        print('con items: ')
+        for k,v in dik.items():
+            print(f" k= {k} , v= {v}")
+        #ejemplo con in y not in
+
+        banda = dict( pepe='vato', maria='ruca', tracy='puto', gonzalo='vato', mafer='ruca')
+        band = banda.copy()
+        """print(banda)
+        print('pepe'in banda)
+        print( 'puto' in banda)
+        print('jose' not in banda)
+        print('mafer'not in banda)
+        print(banda)
+        print(band)
+        del band['tracy']
+        print(band)"""
+
+        band.update(eusebio=['1','2','3'])
+        #print(band)
+        band['eusebio']+= [4,5,'6']
+        band.update(pepe=['vato','machin'])
+        band['pepe']+= ['jalisquillo','pendejo']
+        #print(band)
+        #print(band['pepe'])
+
+        for v in band.values():
+            print(v)
+        band['alex'] = ['vato','gto']
+        #print(band)
+        print('pp')
+        from pprint import pprint as pp
+
+        pp(band)
 
 dictionaries_test()

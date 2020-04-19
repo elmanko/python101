@@ -51,6 +51,3 @@ if __name__ == '__main__':
 
 #just trying out the new commit with ssh
 
-def dictionaries_test():
-        people = dict(('Alex' : 31),('Ana' : 27),('Pau' : 23))
-        print(people)
