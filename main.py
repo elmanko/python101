@@ -183,3 +183,81 @@ def dictionaries_test():
         pp(band)
 
 #dictionaries_test()
+#SET
+def set_test():
+    p = {6, 28, 496, 8128, 33550336}
+    print(p)
+    print(type(p))
+    d = {}
+    print(type(d))
+    e = set()
+    print(e)
+    s = set([2, 4, 16, 64, 4096, 65536, 262144])
+    print(s)
+    t = [1,4,2,1,7,9,9]
+    #set() elimina duplicados en listas
+    print(set(t))
+    #sets son iterables pero aleatorios
+    for x in {1,2,4,8,16,32}:
+        print(x)
+   #membership se puede evaluar con in y not in
+    q = {2,4,6,8,10}
+    print(1 in q)
+    print(4 not in q)
+    print(10 in q)
+
+    k = {81, 108}
+    print(k)
+    k.add(54)
+    print(k)
+    #adding a duplicate value doesnt get an error but the set wont show duplicates
+    k.add(54)
+    print(k)
+    #to add multiple itemos to the set use the update function
+    k.update([32,123,34])
+    print(k)
+    print(type(k))
+    #remove and discard can be used to remove items from the set, the difference is remove requires the object to be present or throws and error, discard doesnt
+    #k.remove(66)
+    k.discard(66)
+    print(k)
+    #sets can also be copied by the .copy function
+    j = k.copy()
+
+    print(j)
+    #below j is k is false because even though they have the same values is no the same set
+    print(j is k)
+    print(type(k))
+    print(type(k))
+    print(j == k)
+
+    m = set(j)
+    print(m)
+    print(type(m))
+    print(m is j)
+    print(m == j)
+    
+    mexas = {'juan' , 'maria', 'jose', 'petra', 'luis', 'estela'}
+    gringos = { 'john', 'silvya', 'mike', 'petra'}
+    hombres = {'juan' ,'john','jose','luis','mike'}
+    mujeres = {'maria','silvya','petra','estela'}
+    alto = { 'jose','john', 'silvya'}
+    chaparro = {'juan' ,'maria','petra', 'luis', 'estela','mike'}
+    pocho = {'petra'}
+
+    print(mexas.union(alto))
+    print(gringos.union(chaparro))
+    print( mexas.union(alto))
+    #next print is false as there are no same items of both unions
+    print(gringos.union(chaparro) == mexas.union(alto))
+    #next will show all items who are part of mujeres but are not part of pocho
+    #print(mujeres.difference(pocho))
+    #print(mexas.difference(alto))
+    #print(gringos.difference(alto))
+    #next will print all chaparros who are mexas or chaparro but not both( full outer join)
+    print(mexas.symmetric_difference(chaparro))
+    print(pocho.issubset(mujeres)) #
+    print(alto.issubset(hombres))#all elements of the 1st set are present on the 2nd set
+    print(chaparro.issuperset(mexas))#all elements of the 2nd set are present on the 1st set
+    print(hombres.isdisjoint(mujeres))# no members in common
+set_test()
