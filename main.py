@@ -260,4 +260,4 @@ def set_test():
     print(alto.issubset(hombres))#all elements of the 1st set are present on the 2nd set
     print(chaparro.issuperset(mexas))#all elements of the 2nd set are present on the 1st set
     print(hombres.isdisjoint(mujeres))# no members in common
-set_test()
+#set_test()
