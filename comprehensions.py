@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3.6
 '''
     comprehensions: concise syntax for desc lists, sets and dict
                     Readable and expressive
