@@ -1,3 +1,4 @@
+import sys
 def write_grayscale(filename, pixels):
     height = len(pixels)#size of the image
     width = len(pixels[0])
@@ -49,3 +50,26 @@ def _int32_to_bytes(i):
                 i >> 8 & 0xff,
                 i >> 16 & 0xff,
                 1 >> 24 & 0xff))
+
+def dimensions(filename):
+    """ Reverses with the bmp file create from fractal
+        the size of the file, with and height
+        i.e
+        import bmp
+        bmp.dimensions("mandel.bmp")
+        (448,256)
+        """
+    with open(filename, 'rb') as f:
+        magic = f.read(2)
+        if magic != b'BM':
+            raise ValueError("{} is not a BMP file".format(filename))
+
+        f.seek(18)
+        width_bytes = f.read(4)
+        height_bytes = f.read(4)
+
+        return(_bytes_to_int32(width_bytes),
+                _bytes_to_int32(height_bytes))
+
+def _bytes_to_int32(b):
+    return b[0] | (b[1] << 8) | (b[2] << 16) | (b[3] << 24)
