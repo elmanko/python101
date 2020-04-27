@@ -261,3 +261,35 @@ def set_test():
     print(chaparro.issuperset(mexas))#all elements of the 2nd set are present on the 1st set
     print(hombres.isdisjoint(mujeres))# no members in common
 #set_test()
+import sys
+from itertools import count, islice
+
+def sequence():
+    """ genera una secuencia de Recaman"""
+    seen = set()
+    a = 0
+    for n in count(1):
+        yield a
+        seen.add(a)
+        c = a - n
+        if c < 0 or c in seen:
+            c = a + n
+        a = c
+
+def write_sequence(filename, num):
+    """ escribe una secuencia a un archivo"""
+    #f = open(filename, mode='wt', encoding='utf-8')
+    #f.writelines(f"{r}\n"
+    #            for r in islice(sequence(), num + 1))
+    #f.close()
+    with open(filename, mode='wt', encoding='utf-8') as f:
+        f.writelines(f"{r}\n"
+                for r in islice(sequence(), num + 1))
+
+if __name__ == '__main__':
+    write_sequence(filename=sys.argv[1],
+                    num=int(sys.argv[2]))
+
+#exeuted by running: python3.6 main.py recaman.dat 1000
+#generated recaman.dat with 1000 lines
+
