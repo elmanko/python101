@@ -1,3 +1,4 @@
 packages/*
 .vscode
 __pycache__/*
+resolver/__pycache__/resolver.cpython-36.pyc
